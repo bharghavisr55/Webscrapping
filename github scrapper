@@ -1,0 +1,7 @@
+import requests
+from bs4 import BeautifulSoup
+url='https://stackoverflow.com/questions/tagged/python'
+get_text = get_url.text
+soup = BeautifulSoup(get_text, "html.parser")
+DivTitle = soup.select('a.s-link"')[0].text.strip()
+print(DivTitle)
